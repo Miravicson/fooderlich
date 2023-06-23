@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:fooderlich/fooderlich_theme.dart';
 
 class Card1 extends StatelessWidget {
   const Card1({super.key});
 
-  final String category = 'Editor\s Choice';
+  final String category = 'Editor\'s Choice';
   final String title = 'The Art of Dough';
   final String description = 'Learn to make the perfect bread.';
   final String chef = 'Victor Ughonu';
@@ -25,6 +26,37 @@ class Card1 extends StatelessWidget {
           borderRadius: BorderRadius.all(
             Radius.circular(10.0),
           ),
+        ),
+        child: Stack(
+          children: [
+            Text(
+              category,
+              style: FooderlichTheme.darkTextTheme.bodyLarge,
+            ),
+            Positioned(
+              top: 20,
+              child: Text(
+                title,
+                style: FooderlichTheme.darkTextTheme.headlineSmall,
+              ),
+            ),
+            Positioned(
+              bottom: 30,
+              right: 0,
+              child: Text(
+                description,
+                style: FooderlichTheme.darkTextTheme.bodyLarge,
+              ),
+            ),
+            Positioned(
+              bottom: 10,
+              right: 0,
+              child: Text(
+                chef,
+                style: FooderlichTheme.darkTextTheme.bodyLarge,
+              ),
+            )
+          ],
         ),
       ),
     );
