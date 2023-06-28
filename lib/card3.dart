@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:fooderlich/fooderlich_theme.dart';
 
@@ -30,28 +32,78 @@ class Card3 extends StatelessWidget {
               ),
             ),
             Container(
-                padding: const EdgeInsets.all(16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Icon(
-                      Icons.book,
-                      color: Colors.white,
-                      size: 40,
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Icon(
+                    Icons.book,
+                    color: Colors.white,
+                    size: 40,
+                  ),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    'Recipe Trends',
+                    style: FooderlichTheme.darkTextTheme.displayMedium,
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                ],
+              ),
+            ),
+            Center(
+              child: Wrap(
+                alignment: WrapAlignment.start,
+                spacing: 12,
+                runSpacing: 12,
+                children: [
+                  Chip(
+                    label: Text(
+                      'Healthy',
+                      style: FooderlichTheme.darkTextTheme.bodyLarge,
                     ),
-                    const SizedBox(
-                      height: 8,
+                    backgroundColor: Colors.black.withOpacity(0.7),
+                    onDeleted: () {
+                      log('delete');
+                    },
+                  ),
+                  Chip(
+                    label: Text(
+                      'Vegan',
+                      style: FooderlichTheme.darkTextTheme.bodyLarge,
                     ),
-                    Text(
-                      'Recipe Trends',
-                      style: FooderlichTheme.darkTextTheme.displayMedium,
+                    backgroundColor: Colors.black.withOpacity(0.7),
+                    onDeleted: () {
+                      log('delete');
+                    },
+                  ),
+                  Chip(
+                    label: Text(
+                      'Carrots',
+                      style: FooderlichTheme.darkTextTheme.bodyLarge,
                     ),
-                    const SizedBox(
-                      height: 30,
+                    backgroundColor: Colors.black.withOpacity(0.7),
+                  ),
+                  Chip(
+                    label: Text(
+                      'Redish',
+                      style: FooderlichTheme.darkTextTheme.bodyLarge,
                     ),
-                  ],
-                ))
-            // TODO: Add center widget with Chip widget children
+                    backgroundColor: Colors.black.withOpacity(0.7),
+                  ),
+                  Chip(
+                    label: Text(
+                      'Greenish',
+                      style: FooderlichTheme.darkTextTheme.bodyLarge,
+                    ),
+                    backgroundColor: Colors.black.withOpacity(0.7),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),

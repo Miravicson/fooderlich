@@ -47,11 +47,11 @@ class _HomeState extends State<Home> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.card_giftcard),
-            label: 'Card2',
+            label: 'Card 2',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.card_giftcard),
-            label: 'Card3',
+            label: 'Card 3',
           ),
         ],
       ),
